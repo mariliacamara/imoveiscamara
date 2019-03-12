@@ -1,0 +1,394 @@
+/* Importa fontes para o site do www.googlefonts.com */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+
+/*RESET*/
+* {margin: 0; padding: 0;box-sizing: border-box;}
+
+/*Cores*/
+
+.preto{color:#000;}
+.bg-preto{background-color: rgba(0, 0, 0);}
+.bg-preto{background-color: rgba(0, 0, 0, 0.5);}
+.bg-branco{background-color: #fff;}
+.cinza{color:#cacaca;}
+.bg-cinza{background-color: rgb(247, 247, 247);}
+.verde{color:#102430}
+.bg-verde{background-color:#0c3c58}
+
+/* PadrÃƒÆ’Ã‚Âµes */
+.clearfix{
+    content: "";
+    clear: both;
+    overflow: auto;
+    display: table;
+}
+
+.container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.esquerda{float: left}
+.direita{float: right}
+.centro{text-align: center; margin: auto}
+
+
+/* Corpo do site */
+body{
+    font-family: 'Fira Sans', sans-serif, verdana;
+    font-size: 14pt;
+}
+
+/*CabeÃƒÆ’Ã‚Â§alho*/
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 500px;
+    text-align: center;
+    padding-top: 800px;
+}
+
+nav, #menu {
+    width: 100%;
+    position: fixed;
+    top:0;
+    max-width: 100%;
+    min-height: 97px;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+nav img, #menu img{
+    float: left;
+    width: 120px;
+    padding: 10px;
+}
+
+nav ul, #menu ul{
+    margin-left: 10%;
+    text-align: center;
+}
+
+nav ul li, #menu ul li{
+    display: inline-block;
+    line-height: 60px;
+}
+
+nav ul li a, #menu ul li a{
+    padding: 20px 30px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+
+nav ul li a:hover, #menu ul li a:hover{
+    color: #13608d;
+    border-bottom: 3px solid #13608d;
+}
+
+section{
+    padding: 50px 0;
+}
+
+section h1 {
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer{
+    width: 100%;
+    padding: 40px 0 0 0;
+}
+
+footer div{
+    width: 25%;
+    min-width: 320px;
+    float: left;
+}
+
+footer .contato, footer .formulario{
+    width: 50%;
+    padding: 20px 100px;
+}
+
+footer .creditos {
+    width: 100%;
+    min-width: 320px;
+    padding: 20px 20px;
+    text-align: center;
+    font-size:16px;
+
+}
+
+.contato h4, .formulario h4 {
+    padding-bottom: 15px;
+}
+
+.formulario input, .formulario select, .formulario textarea {
+    display: block;
+    padding: 5px;
+    background-color: #e1e1e1;
+    border: 1px solid #0a2e42;
+}
+
+.formulario button{
+    color: #e1e1e1;
+    background-color: #0c3c58;
+    border: 1px solid #0a2e42;
+    padding: 5px;
+}
+
+.formulario button:hover{
+    background-color: #0c3c58;
+    border: 1px solid #0a2e42;
+}
+
+/* */
+
+.venda {
+    width: 100%;
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+#sobre {
+    width: 100%;
+}
+
+.texto, .foto {
+    width: 50%;
+    min-width: 320px;
+    padding: 0 0;
+    float: left;
+}
+
+.texto {
+    padding: 50px  20px;
+}
+
+.texto h1 {
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 60px;
+}
+
+.texto p {
+    text-align: justify;
+
+}
+
+.foto img{
+    min-width: 50px;
+    padding: 10px 0 0 40px;
+}
+
+.social{
+    margin-bottom: 40px;
+}
+
+#aluguel {
+    padding: 0 100px;
+}
+
+#aluguel div{
+    width: 50%;
+    min-width: 320px;
+    float: left;
+    padding: 20px;
+}
+
+#aluguel div img{
+    width: 100%;
+}
+
+#aluguel div h5{
+    padding-top: 25px;
+}
+
+#aluguel div h2{
+    padding-bottom: 23px;
+    text-align: left;
+
+}
+
+
+/* Depoimentos */
+.comentarios{
+    background-image: url(../img/depoimentos_sp.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    min-height: 300px;
+}
+
+.comentarios h1 {
+    color: #fff;
+}
+
+.comentarios div {
+    width: 30%;
+    min-width: 320px;
+    padding: 40px;
+    font-size: 12pt;
+    text-align: center;
+    margin: auto 20px;
+    color: #fff;
+    float: left;
+}
+
+.comentarios div img{
+    min-width: 320px;
+}
+.comentarios p {
+    padding-bottom: 10px;
+}
+
+
+/*Mapa*/
+
+.mapa{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    min-height: 400px;
+}
+
+/*Corretores*/
+
+.corretores{
+    background-image: url(../img/rio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    min-height: 800px;
+    width: 100%;
+}
+
+.corretores h1 {
+    text-align: left;
+    padding: 50px 100px;
+}
+
+.corretores div {
+    width: 30%;
+    min-width: 320px;
+    padding: 40px;
+    font-size: 12pt;
+    text-align: justify;
+    margin: auto 20px;
+    color: #fff;
+    float: left;
+}
+
+.corretores div img{
+    min-width: 260px;
+    border-radius: 50%;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.corretores p {
+    padding-bottom: 10px;
+}
+
+
+/*LOGIN*/
+
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('https://abrilexame.files.wordpress.com/2017/06/thinkstockphotos-547155280.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #13608d;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #13608d;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #13608d;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
