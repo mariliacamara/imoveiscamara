@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    unset ($_SESSION['PRI']);
-    UNSET ($_SESSION['ACESSO']);
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -25,6 +19,13 @@
         <input type="hidden" name="acao" id="acao" />
     </form>
 
+    <div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Cadastrar</h3>
+            </div>
+			<div class="card-body">
     <?php 
 				include "connection.php";
 			  		
@@ -33,7 +34,11 @@
 				$query = NULL;  
 				
 				if(isset($_POST["cancelar"])){	
-				  echo "<script>location.href='usuario.php';</script>";
+                    if ($_SESSION['pri'] == "Master"){
+                        echo "<script>location.href='master.php';</script>";
+                    } else {
+                        echo "<script>location.href='usuario.php';</script>";
+                    }
                 }
                 
                 $query = NULL;
@@ -59,63 +64,67 @@
 							$result = mysqli_num_rows($query);
 							if($result == 0){
                             ?>
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Cadastrar</h3>
-			</div>
-			<div class="card-body">
-				<form name="form_usuario" method="post" action="acesso.php">
+				<form name="form_usuario" method="post" action="#">
 					<div class="input-group form-group">
-                        <label for="inputLogin" >E-mail</label>
-						<input type="text" class="form-control" id="email" name="email" placeholder="Nome do Usuário">	
+                        <div class="input-group-prepend1">
+							<span class="input-group-text">Email</span>
+						</div>
+						<input type="text" class="form-control" id="email" name="email"  value="<?php echo $email;?>" readonly>	
 					</div>
 					<div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                    <div class="input-group-prepend1">
+							<span class="input-group-text">Senha</span>
+						</div>
+                        <input type="password" name="senha" id="senha" class="form-control"   />
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Nome</label>
-                        <input type="text" name="nome" id="nome" class="form-control" style ='width:150px;text-align:center' />
+                    <div class="input-group-prepend1">
+							<span class="input-group-text">Nome</span>
+						</div>
+                        <input type="text" name="nome" id="nome" class="form-control"  />
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                        <div class="input-group-prepend1">
+							<span class="input-group-text">Privilégio</span>
+						</div>
+                        <select name="privilegio" id="privilegio" class="form-control" style>
+									<option value="1" <?php echo $privilegio=='Master'?'selected':'';?>>Master</option>
+									<option value="2" <?php echo $privilegio=='Usuario'?'selected':'';?>>Usuário</option>
+								</select></br></br></br>	
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                        <div class="input-group-prepend1">
+							<span class="input-group-text">Telefone</span>
+						</div>
+                        <input type="text" name="telefone" id="telefone" class="form-control"  />
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                        <div class="input-group-prepend1">
+							<span class="input-group-text">Sexo</span>
+						</div>
+                        <input type="text" name="sexo" id="sexo" class="form-control" />
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                    <div class="input-group-prepend1">
+							<span class="input-group-text">Idade</span>
+						</div>
+                        <input type="text" name="idade" id="idade" class="form-control" />
                     </div>
                     <div class="input-group form-group">
-                        <label for="inputEvento" >Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control" style ='width:150px;text-align:center' />
+                        <div class="input-group-prepend1">
+							<span class="input-group-text">Interesse</span>
+						</div>
+                        <input type="text" name="interesse" id="interesse" class="form-control" />
                     </div>
                     
 
-					<div class="row align-items-center remember">
-						<input type="checkbox">Lembre-me
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
-					</div>
+                    <div class="form-group">
+                        <input type="submit" name="cancelar" id="cancelar" value="Cancelar" class="btn float-right login_btn">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="incluir" id="incluir" value="Cadastrar" class="btn float-right login_btn">
+                    </div>
 				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Não tem uma conta?<a href="#">Cadastre-se</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Esqueci minha senha?</a>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -150,8 +159,7 @@
 	function checar(e){
 		document.form_usuario.acao.value = e;
 		document.form_usuario.submit();
-	}
-    
+	}    
 </script>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

@@ -22,13 +22,13 @@
         $registro = mysqli_fetch_row($query);
         $email = $registro[2];
         $senha = $registro[3];
-        $privilegio = $registro[6];
+        $privilegio = $registro[4];
         if($privilegio == "Master"){
             $_SESSION['pri'] = $privilegio;
             echo "<script>alert('Bem-Vindo ao Sistema!!);</script>";
-            echo "<script>window.location='sistema.php';</script>";
+            echo "<script>window.location='master.php';</script>";
         }else{
-            if($privilegio == "Cliente"){
+            if($privilegio == "Usuario"){
                 $_SESSION['pri'] = $privilegio;
                 echo "<script>alert('Bem-Vindo ao Sistema!!);</script>";
                 echo "<script>window.location='iniciousuario.php';</script>";

@@ -1,3 +1,12 @@
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+ $senha = $_POST["senha"];
+$privilegio = $_POST["privilegio"];
+$telefone = $_POST["telefone"];
+$sexo = $_POST["sexo"];
+$idade = $_POST["idade"];
+$interesse = $_POST["interesse"];
+
 <form class="form-signin" name="form_usuario" id="form_usuario" method="POST" action="#">
                                 <center><h2 class="form-signin-heading">Dados do Evento - Incluir</h2></center>
                                     <center>
