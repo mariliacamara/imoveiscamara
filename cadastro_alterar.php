@@ -53,12 +53,12 @@
 						if ($_POST["privilegio"] == 2){
 						$privilegio = "Usuario";
 						}
-                    }
+                    };
                         $telefone = $_POST["telefone"];
                         $sexo = $_POST["sexo"];
                         $idade = $_POST["idade"];
                         $interesse = $_POST["interesse"];                       
-					$query = mysqli_query($cnn,"UPDATE usuario SET nome = '$nome', email = '$email',senha='$senha', privilegio = '$prilegio', telefone = '$telefone', sexo ='$sexo', idade = '$idade', interesse = '$interesse' WHERE email = '$email'") or die(mysqli_error());  
+					    $query = mysqli_query($cnn,"UPDATE usuario SET nome = '$nome', email = '$email',senha='$senha', privilegio = '$privilegio', telefone = '$telefone', sexo ='$sexo', idade = '$idade', interesse = '$interesse' WHERE email = '$email'") or die(mysqli_error());  
                     if ($_SESSION['pri'] == "Master"){
                         echo "<script>location.href='master.php';</script>";
                     } else {
@@ -101,19 +101,19 @@
                     <div class="input-group-prepend1">
 							<span class="input-group-text">Senha</span>
 						</div>
-                        <input type="password" name="senha" id="senha" class="form-control"   />
+                        <input type="password" name="senha" id="senha" class="form-control" value="<?php echo $senha;?>"  />
                     </div>
                     <div class="input-group form-group">
                     <div class="input-group-prepend1">
 							<span class="input-group-text">Nome</span>
 						</div>
-                        <input type="text" name="nome" id="nome" class="form-control"  />
+                        <input type="text" name="nome" id="nome" class="form-control" value="<?php echo $nome;?>"  />
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend1">
 							<span class="input-group-text">Privilégio</span>
 						</div>
-                        <select name="privilegio" id="privilegio" class="form-control" style>
+                        <select name="privilegio" id="privilegio" class="form-control" readonly>
 									<option value="1" <?php echo $privilegio=='Master'?'selected':'';?>>Master</option>
 									<option value="2" <?php echo $privilegio=='Usuario'?'selected':'';?>>Usuário</option>
 								</select></br></br></br>	
@@ -122,25 +122,25 @@
                         <div class="input-group-prepend1">
 							<span class="input-group-text">Telefone</span>
 						</div>
-                        <input type="text" name="telefone" id="telefone" class="form-control"  />
+                        <input type="text" name="telefone" id="telefone" class="form-control" value="<?php echo $telefone;?>" />
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend1">
 							<span class="input-group-text">Sexo</span>
 						</div>
-                        <input type="text" name="sexo" id="sexo" class="form-control" />
+                        <input type="text" name="sexo" id="sexo" class="form-control" value="<?php echo $sexo;?>"/>
                     </div>
                     <div class="input-group form-group">
                     <div class="input-group-prepend1">
 							<span class="input-group-text">Idade</span>
 						</div>
-                        <input type="text" name="idade" id="idade" class="form-control" />
+                        <input type="text" name="idade" id="idade" class="form-control" value="<?php echo $idade;?>" />
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend1">
 							<span class="input-group-text">Interesse</span>
 						</div>
-                        <input type="text" name="interesse" id="interesse" class="form-control" />
+                        <input type="text" name="interesse" id="interesse" class="form-control" value="<?php echo $interesse;?>"/>
                     </div>
                     
 

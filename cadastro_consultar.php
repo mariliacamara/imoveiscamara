@@ -83,11 +83,9 @@
                                        
 
                     <div class="form-group">
-                        <input type="submit" name="cancelar" id="cancelar" value="Cancelar" class="btn float-right login_btn">
+                        <input type="submit" name="cancelar" id="cancelar" value="Voltar" class="btn float-right login_btn">
                     </div>
-                    <div class="form-group">
-                        <input type="submit" name="incluir" id="incluir" value="Cadastrar" class="btn float-right login_btn">
-                    </div>
+                    
 				</form>
 			</div>
 		</div>

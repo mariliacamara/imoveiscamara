@@ -31,7 +31,7 @@
             if($privilegio == "Usuario"){
                 $_SESSION['pri'] = $privilegio;
                 echo "<script>alert('Bem-Vindo ao Sistema!!);</script>";
-                echo "<script>window.location='iniciousuario.php';</script>";
+                echo "<script>window.location='usuario.php';</script>";
             }
 
         }
