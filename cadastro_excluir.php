@@ -27,7 +27,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Consultar</h3>
+				<h3>Excluir</h3>
             </div>
 			<div class="card-body">
             <?php 
@@ -53,7 +53,8 @@
                 echo "<script>location.href='master.php';</script>";
             } else {
                 echo "<script>location.href='usuario.php';</script>";
-        }
+            }
+            }
          
         if(isset($_POST["acao"])){
             switch ($_POST["acao"]){
@@ -68,6 +69,7 @@
                         } else {
                             echo "<script> alert('Usuário não Cadastrado!!'); </script>";
                             echo "<script>location.href='usuario.php';</script>";
+                        }
                     } 
                     if($result == 1){
                         $registro = mysqli_fetch_row($query);
@@ -100,7 +102,7 @@
                         <input type="submit" name="cancelar" id="cancelar" value="Cancelar" class="btn float-right login_btn">
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="excluir" id="excluir" value="Cadastrar" class="btn float-right login_btn">
+                        <input type="submit" name="excluir" id="excluir" value="Excluir" class="btn float-right login_btn">
                     </div>
 				</form>
 			</div>
@@ -108,9 +110,9 @@
 	</div>
 
 								<?php
-							}						
-					}
-				}							
+					}						
+			}
+		}							
 								?>		
 
 </div>

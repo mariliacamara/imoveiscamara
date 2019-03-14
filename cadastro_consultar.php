@@ -49,11 +49,10 @@
             switch ($_POST["acao"]){
               case "consultar":
                 $email = $_POST["email1"];
-                $query = mysqli_query($cnn,"SELECT * FROM usuario WHERE email = '$email'") or die(mysql_error());       
+                $query = mysqli_query($cnn,"SELECT * FROM usuario WHERE email = '$email'") or die(mysqli_error());       
                 $result = mysqli_num_rows($query);
                 if($result == 0){
                   echo "<script> alert('Usuário não Cadastrado!!'); </script>";
-
                   echo "<script> window.location='master.php';</script>"; 					
                 }
                 else{ 
@@ -94,12 +93,12 @@
 		</div>
 	</div>
 
-                  <?php
+<?php
                 }	;					
             };
           }
 
-                    ?>		
+?>		
 
 </div>
 
